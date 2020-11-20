@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""`sphinx_rtd_theme` lives on `Github`_.
+"""`annax_theme` lives on `Github`_.
 
 .. _github: https://github.com/readthedocs/sphinx_rtd_theme
 
@@ -84,7 +84,7 @@ class TransifexCommand(distutils.cmd.Command):
 
 
 setup(
-    name='sphinx_rtd_theme',
+    name='annax_theme',
     version='0.5.0',
     url='https://github.com/readthedocs/sphinx_rtd_theme',
     license='MIT',
@@ -99,19 +99,20 @@ setup(
         'watch': WebpackDevelopCommand,
     },
     zip_safe=False,
-    packages=['sphinx_rtd_theme'],
-    package_data={'sphinx_rtd_theme': [
+    packages=['annax_theme'],
+    package_data={'annax_theme': [
         'theme.conf',
+        'static/tools/web2pdf.py'
         '*.html',
+        'static/images/*.svg',
         'static/css/*.css',
-        'static/css/fonts/*.*'
         'static/js/*.js',
     ]},
     include_package_data=True,
     # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
     entry_points = {
         'sphinx.html_themes': [
-            'sphinx_rtd_theme = sphinx_rtd_theme',
+            'annax_theme = annax_theme',
         ]
     },
     install_requires=[

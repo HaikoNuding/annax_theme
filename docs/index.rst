@@ -7,6 +7,7 @@
    installing
    configuring
    contributing
+   modify_annax_theme
 
 .. toctree::
    :maxdepth: 1
