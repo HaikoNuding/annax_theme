@@ -1,0 +1,165 @@
+@media screen and (min-width: 767px)
+  .wy-table-responsive
+    table td
+      /* !important prevents the common CSS stylesheets from overriding
+       * this as on RTD they are loaded after this stylesheet
+      white-space: normal !important
+
+    overflow: visible !important
+
+  /*.rst-content img {
+   *   width: auto;
+   *   height: auto;
+   *   min-width: 0;
+   *}
+
+  /*  does not work as it is before the default!?
+
+  div.line-block, .rst-content .line-block
+    margin-bottom: 0
+
+/********************* CSS related to print ********************
+
+/*CSS settings for printing
+/*Browser settings for printing
+/*Mozilla Firefox print settings:  Print background colors [enable]
+/*Chrome Firefox print settings:  Background graphics [enable]
+@media print
+  body
+    height: 100%
+    width: 100%
+    margin: $page-content-margin
+  div
+    &.admonition
+      page-break-inside: avoid
+
+    &.admonition-todo
+      page-break-inside: avoid
+
+      &.admonition > .admonition-title
+        background-color: $--todo-t-bg-color !important
+
+  .admonition-todo.admonition
+    background-color: $--todo-bg-color !important
+
+  /*Customize print WARNING title background color
+
+  div.admonition
+    &.warning
+      > .admonition-title
+        background-color: $--wt-bg-color-title !important
+
+      background-color: $--w-bg-color !important
+
+    &.note
+      > .admonition-title
+        background-color: $--nt-bg-color !important
+
+      background-color: $--n-bg-color !important
+
+  /*Customize print WARNING background color
+
+  /*Customize print NOTE background color
+
+  /*Customize print NOTE background color
+
+  .wy-table-responsive
+    table td
+      /* !important prevents the common CSS stylesheets from overriding
+       * this as on RTD they are loaded after this stylesheet
+      white-space: normal !important
+
+    overflow: visible !important
+
+  img
+      height: 50px!important
+      min-height: 50px !important
+      min-width: 200px !important
+      max-height: 80px !important
+      max-width: 700px !important
+  img
+    &.r-img
+      height: 50px!important
+      min-height: 50px !important
+      min-width: 200px !important
+      max-height: 80px !important
+      max-width: 700px !important
+
+    &.fl-img
+      height: 50px !important
+      min-height: 50px !important
+      min-width: 200px !important
+      max-height: 80px !important
+      max-width: 700px !important
+
+    &.ma-max-img
+      height: auto
+      min-height: 120px !important
+      min-width: 600px !important
+      width: 800px !important
+      max-width: 700px !important
+
+    &.ma-red-img
+      height: auto
+      min-height: 120px !important
+      min-width: 600px !important
+      width: 800px !important
+      max-width: 700px !important
+  /*  does not work as it is before the default!?
+
+  div.line-block, .rst-content .line-block
+    margin-bottom: 0
+
+/*!*CSS prevents page breaks in figures*!
+
+figure
+  page-break-inside: avoid
+
+h3, h4, h5
+  page-break-after: avoid
+
+@page :right
+  @bottom-left
+    border-top: .25pt solid #666
+    font-size: 9pt
+    color: #333
+
+  @bottom-right
+    border-top: .25pt solid #666
+    font-size: 9pt
+
+  @top-right
+    font-size: 9pt
+    color: #333
+
+/*Keep the common content together
+
+div.section
+  page-break-inside: avoid
+
+  &:first-of-type
+    page-break-inside: auto
+
+/*The first section will handle page breaks automatically
+
+/*Adding margin to prevent content overlapping the footer or header of the page
+@page
+  margin: $page-margin
+
+/*This printable CSS will provide better table print support when using images.
+/*The print will override the inline HTML style of the table columns by setting max to 7cm.
+/*This css will ensure that the column width is based on the content and will wrap text if possible.
+@media print
+  /*Keep the common content together
+
+  div.section
+    page-break-inside: avoid
+
+  colgroup > col
+    width: auto !important
+
+  table.docutils.align-default.colgroup
+    display: table-column-group !important
+
+  div.line-block > div.line
+    overflow-wrap: break-word
