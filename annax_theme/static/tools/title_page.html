@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RhB KIS Mischbetrieb Konzept 2020+ &mdash; RhB KIS Mischbetrieb Konzept 2020+ 1 Dokumentation</title>
+    <script>
+          function subst() {
+              var vars = {};
+              var query_strings_from_url = document.location.search.substring(1).split('&');
+              for (var query_string in query_strings_from_url) {
+                  if (query_strings_from_url.hasOwnProperty(query_string)) {
+                      var temp_var = query_strings_from_url[query_string].split('=', 2);
+                      vars[temp_var[0]] = decodeURI(temp_var[1]);
+                  }
+              }
+              var css_selector_classes = ['page', 'frompage', 'topage', 'webpage', 'section', 'subsection', 'date', 'isodate', 'time', 'title', 'doctitle', 'sitepage', 'sitepages'];
+              for (var css_class in css_selector_classes) {
+                  if (css_selector_classes.hasOwnProperty(css_class)) {
+                      var element = document.getElementsByClassName(css_selector_classes[css_class]);
+                      for (var j = 0; j < element.length; ++j) {
+                          element[j].textContent = vars[css_selector_classes[css_class]];
+                      }
+                  }
+              }
+          }
+  </script>
+</head>
+<body class="wy-body-for-nav">
+    <H1>
+        Projekt: <span class="doctitle"></span>
+        <br>
+        Software Design Description (SDD) für <span class="title"></span>
+    </H1>
+    <style>
+        @media print {
+            .agb {
+                width: 40% !important;
+                border-right: 1px solid black;
+                padding: 5px;
+            }
+
+            .contentBox {
+                width: 17cm;
+                margin: auto;
+                outline: 1px solid black;
+            }
+
+            .flex-container {
+                display: flex;
+                display: -webkit-box;
+                flex-wrap: nowrap;
+            }
+
+            .flex-container-2 {
+                display: flex;
+                display: -webkit-box;
+                flex-wrap: wrap;
+                width: 20%;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+            }
+
+            .flex-container > div {
+                width: 22%;
+                margin: 2%;
+            }
+
+            .flex-container-2 > div {
+                margin: 2%;
+                width: 100%;
+            }
+
+            .title-info-bottom {
+                border-top: 1px solid black;
+            }
+
+            .title-div-right {
+                width: 15% !important;
+            }
+
+            .border-bottom {
+                border-bottom: 1px solid black;
+            }
+        }
+    </style>
+<div class="contentBox">
+        <div class="flex-container">
+        <div class="title-div-right">CDRL:</div>
+        <div>Referenz Spezifikation:</div>
+    </div>
+        <div class="contentBox">
+        <div class="flex-container border-bottom">
+        <div class="title-div-right">CDRL:</div>
+        <div>Reference Specification:</div>
+    </div>
+
+
+    <div class="flex-container">
+      <div class="title-div-right">Erstellt:</div>
+      <div><div class="border-bottom"><span style="display: inline-block"></span></div>Systemarchitekt<div></div></div>
+      <div><div><div class="border-bottom"><span style="display: inline-block"></span></div>Unterschrift<div></div></div></div>
+      <div><div><div class="border-bottom">Unterschrieben</div>JJJ-MM-TT<div></div></div></div>
+    </div>
+
+    <div class="flex-container">
+      <div class="title-div-right">Geprüft:</div>
+      <div><div class="border-bottom"><span style="display: inline-block"></span></div>Systemarchitekt<div></div></div>
+      <div><div><div class="border-bottom"><span style="display: inline-block"></span></div>Unterschrift<div></div></div></div>
+      <div><div><div class="border-bottom">Unterschrieben</div>JJJ-MM-TT<div></div></div></div>
+    </div>
+
+    <div class="flex-container">
+      <div class="title-div-right">Freigegeben:</div>
+      <div><div class="border-bottom"><span style="display: inline-block"></span></div>Systemarchitekt<div></div></div>
+      <div><div><div class="border-bottom"><span style="display: inline-block"></span></div>Unterschrift<div></div></div></div>
+      <div><div><div class="border-bottom">Unterschrieben</div>JJJ-MM-TT<div></div></div></div>
+    </div>
+    <br>
+
+    <div class="flex-container title-info-bottom">
+      <div class="agb">Für dieses Dokument und den darin dargestellten Gegenstand behalten wir uns alle Rechte vor. Vervielfältigungen, Bekanntgabe an Dritte oder Verwertung seines Inhaltes sind ohne unsere ausdrückliche Zustimmung verboten.</div>
+      <div class="flex-container-2">
+           <div>
+               Dokumentennummer: <br><br>
+               Version: <br><br>
+               Datum: <br><br>
+           </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+</body></html>
