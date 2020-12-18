@@ -67,6 +67,7 @@ Theme static files
     │        │   └── fonts
     │        ├── images
     │        ├── js
+    │        ├── tools
     ├── annax_theme.egg-info
     ├── bin
     ├── docs
