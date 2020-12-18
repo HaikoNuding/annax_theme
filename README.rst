@@ -64,6 +64,46 @@ To see all the possible configuration options, read the documentation on
 
 .. _configuring the theme: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
 
+Generate PDF documentation
+==========================
+
+The Annax Sphinx Theme offers a python script which will generate a pdf document from the
+Annax Sphinx documentation. The default PDF file name is the project name.
+
+::
+
+    annax_theme
+    ├── annax_theme
+    │    ├── locale
+    │    ├── __pycache__
+    │    ├── static
+    │        ├── css
+    │        ├── images
+    │        ├── js
+    │        ├── tools
+    │        │   └── ``web2pdf.py``
+    ├── annax_theme.egg-info
+    ├── bin
+    ├── docs
+    ├── node_modules
+    ├── sphinx_rtd_theme.egg-info
+    ├── src
+    └── tests
+
+Generate a PDF file with the default file name:
+
+.. code:: console
+
+    $ python3 web2pdf
+
+Generate a PDF file with the given file name:
+
+.. code:: console
+
+    $ python3 web2pdf -pdf AnnaxDoc1
+
+For more information, read the full documentation on our :ref:`WEB2PDF` documentation.
+
 Contributing
 ============
 
@@ -77,7 +117,7 @@ Modifying the theme
 
 The styles for this theme use `SASS`_ and a custom CSS framework called `Wyrm`_.
 We use `Webpack`_ and `node-sass`_ to build the CSS.
-More information for modifying the Annax theme in :ref:`Modify-Annax-Theme`
+More information for modifying the Annax theme in :ref:`Modify-Annax-Theme`.
 
 .. _SASS: http://www.sass-lang.com/
 .. _Wyrm: https://github.com/snide/wyrm/
