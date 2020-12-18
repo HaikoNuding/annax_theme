@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+  <html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+  function subst() {
+      var vars = {};
+      var query_strings_from_url = document.location.search.substring(1).split('&');
+      for (var query_string in query_strings_from_url) {
+          if (query_strings_from_url.hasOwnProperty(query_string)) {
+              var temp_var = query_strings_from_url[query_string].split('=', 2);
+              vars[temp_var[0]] = decodeURI(temp_var[1]);
+          }
+      }
+      var css_selector_classes = ['page', 'frompage', 'topage', 'webpage', 'section', 'subsection', 'date', 'isodate', 'time', 'title', 'doctitle', 'sitepage', 'sitepages', 'content'];
+      for (var css_class in css_selector_classes) {
+          if (css_selector_classes.hasOwnProperty(css_class)) {
+              var element = document.getElementsByClassName(css_selector_classes[css_class]);
+              for (var j = 0; j < element.length; ++j) {
+                  element[j].textContent = vars[css_selector_classes[css_class]];
+              }
+          }
+      }
+  }
+  </script>
+</head>
+<body style="border:0; margin: 0;" onload="subst()">
+<style>
+    .footer-font {
+        font-size: 8pt;
+         overflow: hidden;
+        line-height: normal;
+         white-space: nowrap;
+        padding: 0!important;
+    }
+    .footer {
+        word-wrap: break-word;
+        table-layout: fixed;
+        width: 18cm !important;
+        margin: 0!important;
+        padding: 0!important;
+        margin-right: 0.9cm !important;
+    }
+</style>
+<table  style="border-top: 1px solid black; line-height: normal; padding: 0!important;" class="footer">
+    <tr>
+        <td class="footer-font" colspan="2">Doc Title: <span class="doctitle"></span></td>
+    </tr>
+    <tr>
+        <td class="footer-font" colspan="1">Save date: <span class="isodate"></span></td>
+        <td class="footer-font" colspan="1" style="float: right">Status: Draft</td>
+    </tr>
+    <tr>
+        <td colspan="1"></td>
+        <td class="footer-font" colspan="1" style="float: right">Page <span class="page"></span> of <span class="topage"></span>
+    </tr>
+    <tr>
+        <td class="footer-font" colspan="2">Copyright ©ANNAX Switzerland Ltd 2020. All rights reserved.</td>
+    </tr>
+    <tr>
+        <td colspan="2" style="height: 1cm!important; display: block"></td>
+    </tr>
+</table>
+  </body>
+</html>
