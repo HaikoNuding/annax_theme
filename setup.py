@@ -102,9 +102,10 @@ setup(
     packages=['annax_theme'],
     package_data={'annax_theme': [
         'theme.conf',
-        'static/tools/web2pdf.py'
+        'static/tools/*.*'
         '*.html',
-        'static/images/*.svg',
+        'static/css/fonts/*.*'
+        'static/images/*.*',
         'static/css/*.css',
         'static/js/*.js',
     ]},
