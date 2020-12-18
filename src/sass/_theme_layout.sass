@@ -192,14 +192,13 @@ html
   padding: $gutter / 2
   margin-bottom: $gutter / 2
   z-index: $z-index-popover
-  background-color: $nav-search-background-color
+  background-color: $white
   text-align: center
   color: $nav-search-color
   input[type=text]
     width: 100%
     border-radius: 50px
     padding: 6px 12px
-    border-color: darken($link-color, 5%)
   img
     display: block
     margin: auto auto $gutter / 2 auto
@@ -294,7 +293,7 @@ html
 
 .wy-nav-top
   display: none
-  background: $link-color
+  background: $white
   color: $white
   padding: $gutter / 4 $gutter / 2
   position: relative
@@ -427,3 +426,28 @@ footer
 
 div.admonition.warning > .admonition-title
   background-color: $--wt-bg-color-title !important
+
+img.r-img
+  height: 80px !important
+  width: auto
+  min-width: 0
+  max-width: none
+
+img.fl-img
+   height: 50px !important
+   width: auto
+   min-width: 0
+   max-width: none
+
+colgroup
+  display: none !important
+
+
+input.input-search
+  box-shadow: none !important
+
+.wy-side-nav-search input[type="text"]
+  border-radius: 0 !important
+
+.wy-menu-vertical a:hover
+ background-color: $---annax_red

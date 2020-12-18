@@ -2,18 +2,25 @@
 // that are set in wyrm_core/wy_variables.sass. You'll find wyrm in bower_components if you're looking
 // for a reference.
 
+
+// Variable defaults set by Wyrm
+// https://github.com/snide/wyrm/blob/master/sass/wyrm_core/_wy_variables.sass
+
+$text-color:                          $black
+
 $fa-font-path:                        "~font-awesome/fonts"
 $static-img:                          "../img/"
 
-$nav-content-width:                   950px
+$nav-content-width:                   1000px
 $nav-media-query:                     (($nav-desktop-width) + ($nav-content-width))
 
 $mathjax-color:                       $text-color
 
+
 $headerlink-color:                    $text-color
 
 // Code colors
-$text-viewcode-color:                 $green
+$text-viewcode-color:                 $text-color
 $text-codexref-color:                 $text-color
 
 // Definition list colors
@@ -70,14 +77,11 @@ $font-display:                        block
 
 
 // Annax print colors
+$---annax_red:                         #FF0000
 $--w-bg-color:                         #FFEDCC
 $--wt-bg-color-title:                  #FFDD57
 $--todo-bg-color:                      #FFEDCC
 $--todo-t-bg-color:                    #f0b37e
 $--n-bg-color:                         #E7F2F8
 $--nt-bg-color:                        #6ab0de
-
-
-$page-margin:                          0cm 0cm 0cm 0cm
-$page-content-margin:                  0cm
 
