@@ -11,7 +11,7 @@ import os.path as op
 # Add python file arguments
 parser = argparse.ArgumentParser(description='PDF file name')
 parser.add_argument('-pdf', '--pdf_name', metavar='', required=False, type=str, help='PDF file name')
-parser.add_argument('-r', '--g_html', metavar='', required=False, type=bool, help='Generate from HTML directory')
+parser.add_argument('-r', '--r', required=False, type=bool, help='Generate from HTML directory')
 args = parser.parse_args()
 
 # The index file must be the first page of the pdf, since this is the table of contents.
@@ -45,14 +45,15 @@ options = {
 
 }
 
-print( BUILD_DIR+'/html/_images')
+print(BUILD_DIR+'/html/_images')
 # table of content style
 toc = {
     'xsl-style-sheet': 'toc.xsl',
 
 }
 
-cover = './title_page.html'
+cover = './title_page_default.html'
+
 
 # Create a list with all documentation HTML files
 def get_file_paths_of(soup, soup_head):
@@ -104,7 +105,7 @@ def single_html_exists():
 def create_pdf():
     global FILE_PATHS
     global DOCUMENT_TITLE
-    if single_html_exists() and args.g_html is not True:
+    if single_html_exists() and args.r is None:
         print("Generating pdf from single html directory.")
         FILE_PATHS = {"1": SINGLE_HTML_INDEX_PATH}
         index_file = codecs.open(SINGLE_HTML_INDEX_PATH, "r", "utf-8")
