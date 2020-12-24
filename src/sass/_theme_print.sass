@@ -12,14 +12,11 @@
    *   height: auto;
    *   min-width: 0;
    *}
-
   /*  does not work as it is before the default!?
-
   div.line-block, .rst-content .line-block
     margin-bottom: 0
 
 /********************* CSS related to print ********************
-
 /*CSS settings for printing
 /*Browser settings for printing
 /*Mozilla Firefox print settings:  Print background colors [enable]
@@ -42,7 +39,6 @@
     background-color: $--todo-bg-color !important
 
   /*Customize print WARNING title background color
-
   div.admonition
     &.warning
       > .admonition-title
@@ -57,11 +53,8 @@
       background-color: $--n-bg-color !important
 
   /*Customize print WARNING background color
-
   /*Customize print NOTE background color
-
   /*Customize print NOTE background color
-
   .wy-table-responsive
     table td
       /* !important prevents the common CSS stylesheets from overriding
@@ -70,17 +63,15 @@
 
     overflow: visible !important
   /*  does not work as it is before the default!?
-
   div.line-block, .rst-content .line-block
     margin-bottom: 0
 
 /*!*CSS prevents page breaks in figures*!
-
 figure
   page-break-inside: avoid
 
 h3, h4, h5
-  page-break-after: auto
+  page-break-inside: avoid
 
 @page :right
   @bottom-left
@@ -97,7 +88,6 @@ h3, h4, h5
     color: #333
 
 /*Keep the common content together
-
 div.section
   page-break-inside: avoid
 
@@ -105,7 +95,6 @@ div.section
     page-break-inside: auto
 
 /*The first section will handle page breaks automatically
-
 /*Adding margin to prevent content overlapping the footer or header of the page
 @page
   size: auto !important
@@ -124,9 +113,8 @@ div.section
 
     list-style: none
   /*Keep the common content together
-
   div.section
-    page-break-inside: auto
+    page-break-inside: avoid
 
   div.section:last-child
     page-break-after: auto
@@ -169,7 +157,6 @@ div.section
     max-width: none
 
   img.fl-img
-     height: 2cm !important
      width: auto
      min-width: 2cm !important
      max-width: none
@@ -188,4 +175,13 @@ div.section
   h5
     font-size: 11pt
   p
+    line-height: normal !important
     font-size: 10.5pt
+
+  .rst-content .line-block
+    line-height: normal !important
+  div[itemprop="articleBody"] > div.section > div.section
+    page-break-inside: avoid !important
+
+  blockquote
+    page-break-inside: auto !important
