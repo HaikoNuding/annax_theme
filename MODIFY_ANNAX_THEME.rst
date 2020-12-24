@@ -78,4 +78,4 @@ Theme static files
 
 .. note::
 
-    The static folder contains the final static files.
+    The static folder contains the static files for
