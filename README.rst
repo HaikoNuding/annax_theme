@@ -25,16 +25,57 @@ was designed to satisfy the Annax documentation requirements.
 Installation
 ************
 
-Install from GitHub
+Install from tar.gz
 ===================
 
-You can clone the repository and install this version.
+You can install the ``annax_theme-0.5.0.tar.gz``, by following these steps:
 
 .. code:: console
 
-    $ git clone https://github.com/HaikoNuding/annax_theme.git
-    $ cd annax_theme
-    $ pip install -e.
+    $ tar -xzf annax_theme-0.5.0.tar.gz
+    $ cd annax_theme-0.5.0
+
+Set up your environment
+=======================
+
+Install Sphinx and documentation build dependencies
+
+.. code:: console
+
+    $ pip3 install -e '.[dev]'
+
+Install Sphinx Webpack, node-sass and the the dependencies locally.
+
+.. code:: console
+
+    $ npm install
+
+Making changes
+==============
+
+Changes to the ``annnax theme`` can be tested with Webpack:
+
+.. code:: console
+
+    $ npm run dev
+
+This script will do the following:
+
+* Install and update any dependencies.
+* Build the static CSS from SASS source files.
+* Build the demo documentation.
+* Build the demo documentation.
+* Watch for changes to the SASS files and documentation and rebuild everything on any detected changes.
+
+Alternatively, if you dont need to watch the files, the release build can be used to test built assets:
+
+.. code:: console
+
+    $ npm run build
+
+
+Switch to annax theme
+=====================
 
 To use the theme in your Sphinx project, you will need to add the following to
 your ``conf.py`` file:
