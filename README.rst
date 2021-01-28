@@ -25,15 +25,15 @@ was designed to satisfy the Annax documentation requirements.
 Installation
 ************
 
-Install from tar.gz
-===================
+Install a Source Distribution Using Tar File
+============================================
 
-You can install the ``annax_theme-0.5.0.tar.gz``, by following these steps:
+Extract the package files from the compressed tar file issuing the following command:
 
 .. code:: console
 
-    $ tar -xzf annax_theme-0.5.0.tar.gz
-    $ cd annax_theme-0.5.0
+    $ tar -xzf annax_theme-<level>.tar.gz
+    $ cd annax_theme-<level>
 
 Set up your environment
 =======================

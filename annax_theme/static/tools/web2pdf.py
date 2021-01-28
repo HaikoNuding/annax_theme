@@ -125,5 +125,7 @@ FILE_PATHS = natsort.natsorted(FILE_PATHS.items())
 
 FILE_PATHS = dict(FILE_PATHS)
 
+# del FILE_PATHS["Stichwortverzeichnis"]
+# del FILE_PATHS["Suche"]
 # Create PDF file with pdfkit.
 pdfkit.from_file(list(FILE_PATHS.values()), './../../' + DOCUMENT_TITLE + '.pdf', options=options, toc=toc, cover=cover, cover_first=True)

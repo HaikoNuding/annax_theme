@@ -10,7 +10,7 @@ l.dtd"
     <xsl:template match="outline:outline">
         <html>
             <head>
-                <title>Inhaltsverzeichniss</title>
+                <title>Inhaltsverzeichnis</title>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <style>
                     * {
@@ -92,7 +92,7 @@ l.dtd"
                 </style>
             </head>
             <body>
-                <h1>Inhaltsverzeichniss</h1>
+                <h1>Inhaltsverzeichnis</h1>
                 <ul><xsl:apply-templates select="outline:item/outline:item"/></ul>
             </body>
         </html>

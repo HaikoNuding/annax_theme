@@ -1,5 +1,5 @@
 ###########################
-Contributing to Annax Theme
+Contributing to ANNAX Theme
 ###########################
 
 - Reporting a bug
@@ -26,9 +26,17 @@ Any contributions you make will be under the MIT Software License
 
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-*****************************
-Use a Consistent Coding Style
-*****************************
+Creating a Source Distribution
+==============================
+
+If you want to specify additional files to distribute use the manifest template called **MANIFEST.in**.
+
+Use the sdist command to create a source distribution:
+
+.. code:: console
+
+    $ python3 setup.py sdist
+    $ tar --list -f dist/annax_theme-<level>.tar.gz
 
 *******
 License
